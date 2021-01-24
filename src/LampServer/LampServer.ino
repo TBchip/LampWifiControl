@@ -10,11 +10,11 @@ ESP8266WebServer server(80);
 
 void turnOn() {
   server.send(200, "text/plain", "the led should turn on");
-  digitalWrite(13, HIGH);
+  digitalWrite(13, LOW);
 }
 void turnOff() {
   server.send(200, "text/plain", "the led should turn off");
-  digitalWrite(13, LOW);
+  digitalWrite(13, HIGH);
 }
 
 void handleNotFound() {
